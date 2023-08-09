@@ -1,22 +1,19 @@
 package org.malarcondev;
 
-public class ShapeFactory implements AbstractFactory{
-    public Shape getShape(String shape){
-        if (shape == null){
+public class ShapeFactory extends AbstractFactory {
+
+    @Override
+    Shape getShape(String shapeType) {
+        if (shapeType == null){
             return new ShapeDefault();
         }
-        if (shape.equalsIgnoreCase("circle")){
+        else if (shapeType.equalsIgnoreCase("circle")){
             return new Circle();
-        } else if (shape.equalsIgnoreCase("rectangle")) {
+        } else if (shapeType.equalsIgnoreCase("rectangle")){
             return new Rectangle();
-        } else if (shape.equalsIgnoreCase("square")) {
+        } else if (shapeType.equalsIgnoreCase("square")){
             return new Square();
         }
         return new ShapeDefault();
-    }
-
-    @Override
-    public RoundedShape getRoundedShape(String rounded) {
-        return null;
     }
 }

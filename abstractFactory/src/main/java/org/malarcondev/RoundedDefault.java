@@ -1,8 +1,8 @@
 package org.malarcondev;
 
-public class RoundedDefault implements RoundedShape{
+public class RoundedDefault implements Shape{
     @Override
-    public void rounded() {
+    public void draw() {
         System.out.println("this is rounded default");
     }
 }

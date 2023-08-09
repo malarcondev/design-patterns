@@ -2,12 +2,15 @@ package org.malarcondev;
 
 public class Main {
     public static void main(String[] args) {
-        AbstractFactory factory1 = FactoryProducer.getFactory("shape");
-        Shape shape1 = factory1.getShape("circle");
+        AbstractFactory shapeFactory1 = FactoryProducer.getFactory(false);
+        Shape shape1 = shapeFactory1.getShape("circle");
         shape1.draw();
 
-        AbstractFactory factory2 = FactoryProducer.getFactory("rounded");
-        RoundedShape rounded1 = factory2.getRoundedShape("circular");
-        rounded1.rounded();
+        Shape shape2 = shapeFactory1.getShape("rectangle");
+        shape2.draw();
+
+        AbstractFactory shapeFactory2 = FactoryProducer.getFactory(true);
+        Shape shape3 = shapeFactory2.getShape("circular");
+        shape3.draw();
     }
 }

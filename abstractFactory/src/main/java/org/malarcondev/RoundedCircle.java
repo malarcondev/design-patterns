@@ -1,8 +1,8 @@
 package org.malarcondev;
 
-public class RoundedCircle implements RoundedShape{
+public class RoundedCircle implements Shape{
     @Override
-    public void rounded() {
+    public void draw() {
         System.out.println("this is rounded circle");
     }
 }

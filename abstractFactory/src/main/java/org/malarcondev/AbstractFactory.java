@@ -1,6 +1,5 @@
 package org.malarcondev;
 
-public interface AbstractFactory {
-    Shape getShape(String shape);
-    RoundedShape getRoundedShape(String rounded);
+public abstract class AbstractFactory {
+    abstract Shape getShape(String shapeType) ;
 }
